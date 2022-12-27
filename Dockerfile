@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install
+RUN npm install && npm install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # Bundle app source
 COPY . .
